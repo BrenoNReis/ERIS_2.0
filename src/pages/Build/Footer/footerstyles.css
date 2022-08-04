@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: darkgray;
+}
+/*
+  background: linear-gradient(to left, #0b1630,#012a46);
+*/
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: linear-gradient(to left, #0b1630,#012a46);
+  position:fixed;
+  bottom:0;
+  width:100%;
+  margin: auto auto;
+  padding: 10px 5px;
+  clear:both;
+}
+
+.footer_link:hover{
+  filter: brightness(80%);
+}
+
+.footer_brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: default;
+    text-shadow: 2px 2px #000000;
+}
+
+.footer_active{
+  transform: translateX(0);
+}
+
+.footer_welcome{
+  color:rgb(167, 164, 164);
+}

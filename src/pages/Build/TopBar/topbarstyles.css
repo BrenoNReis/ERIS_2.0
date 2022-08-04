@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: darkgray;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background: linear-gradient(to left, #0b1630,#012a46);
+}
+
+/*
+
+ANIMAÇÃO 2
+
+.nav_link{
+    display: inline-block;
+    position: relative;
+    color: darkgray;
+}
+
+.nav_link:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #507791;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+
+.nav_link:hover:after{
+    filter: brightness(80%);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+*/
+
+.nav_link{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: darkgray;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.nav_link:after{
+    content: '';
+    position: absolute;
+    background-color: #507791;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.nav_link:hover:after{
+    width: 100%;
+}
+
+.nav_brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: default;
+    text-shadow: 2px 2px #000000;
+}
+
+.nav_img{
+    margin-top: -300px;
+    margin-left: -250px;
+}
+
+.nav_welcome{
+    color:gainsboro;
+}
+
+.nav_logout{
+    background: rgb(0, 42, 109);
+}
+
+.nav_logout:hover{
+    filter: brightness(80%);
+}
+
+.nav_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.nav_toggler div{
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: darkgray;
+}
+
+.nav_toggler{
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .nav_toggler{
+        display: block;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        width: 50%;
+        height: 93vh;
+        background: rgb(0, 28, 73);
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+}
+
+.nav_active{
+    transform: translateX(0);
+}
